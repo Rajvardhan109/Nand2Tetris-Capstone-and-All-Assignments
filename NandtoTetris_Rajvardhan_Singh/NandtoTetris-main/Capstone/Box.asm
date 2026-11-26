@@ -1,6 +1,6 @@
-// Box.asm for K = 32 (Roll No: 2501010132)
-// Start Row = 32 (Address = 16384 + 32*32 = 17408)
-// Height = 20 rows, Width = 64 pixels (4 words per row)
+// Box.asm for K = 132 (Roll No: 2501010132)
+// Start Row = 132 (Address = 16384 + 32*132 = 20608)
+// Height = 20 rows, Width = 16 pixels (1 word per row)
 
 (LOOP)
     @KBD
@@ -18,7 +18,7 @@
     M=-1
 
 (DRAW_INIT)
-    @17408
+    @20608
     D=A
     @addr
     M=D
@@ -34,35 +34,11 @@
     @LOOP
     D;JEQ
 
-    // Word 0
+    // Word 0 (16 pixels)
     @color
     D=M
     @addr
     A=M
-    M=D
-
-    // Word 1
-    @color
-    D=M
-    @addr
-    A=M+1
-    M=D
-
-    // Word 2
-    @color
-    D=M
-    @addr
-    A=M+1
-    A=A+1
-    M=D
-
-    // Word 3
-    @color
-    D=M
-    @addr
-    A=M+1
-    A=A+1
-    A=A+1
     M=D
 
     // Next row (+32)
