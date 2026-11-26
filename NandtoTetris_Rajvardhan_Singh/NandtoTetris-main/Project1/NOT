@@ -1,0 +1,15 @@
+// by Nisan and Schocken, MIT Press.
+// File name: projects/1/Not.hdl
+/**
+ * Not gate:
+ * if (in) out = 0, else out = 1
+ */
+CHIP Not {
+    IN in;
+    OUT out;
+
+    PARTS:
+    Nand(a=in, b=in , out=out );
+
+    //// Replace this comment with your code.
+}
