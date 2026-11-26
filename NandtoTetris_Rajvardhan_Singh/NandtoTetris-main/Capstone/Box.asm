@@ -1,5 +1,5 @@
-// Box.asm for K = 27 (Roll No: 2501010127)
-// Start Row = 27 (Address = 16384 + 32*27 = 17248)
+// Box.asm for K = 32 (Roll No: 2501010132)
+// Start Row = 32 (Address = 16384 + 32*32 = 17408)
 // Height = 20 rows, Width = 64 pixels (4 words per row)
 
 (LOOP)
@@ -18,7 +18,7 @@
     M=-1
 
 (DRAW_INIT)
-    @17248
+    @17408
     D=A
     @addr
     M=D
